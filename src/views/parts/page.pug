@@ -1,0 +1,48 @@
+.page
+	.side 
+		.side__logo 
+			a(href='#') 
+				+image('logo.svg')
+		.side__prop
+			.side__prop-theme
+				+image('toggle.svg').side__prop-theme-img.js-color
+			.side__prop-swap
+				+image('grid.svg').side__prop-swap-grid
+				+image('row.svg').side__prop-swap-row
+		.side__basket
+			+image('delete.svg')
+
+	.main
+		.header
+			.header__title Projects
+			.header__btn Start new task
+		.content
+			.content__cards 
+				.content__card 
+					.content__card-priority
+						button.round-button
+						#color-popup
+							.color-option.green
+							.color-option.yellow
+							.color-option.red
+					.content__card-text
+						input.content__card-inpute(type='text', placeholder='Write your task')
+					.content__card-options
+						.content__card-btn-edite Edite
+						.content__card-btn-done X
+						.content__card-btn-delite Delite
+				.content__card-create.js-create-card
+					.content__card-create-btn
+
+	.stats
+		.stats__prop 
+		.stats__user 
+			p.stats__user-greet Hello
+			p.stats__user-name UserName
+			.stats__user-img
+				+image('user.svg')
+		.stats__activity
+			p.stats__activity-text Today: 0 tasks
+		.stats__data 
+			.stats__data-time 
+			.stats__data-day

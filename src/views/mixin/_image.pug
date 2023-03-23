@@ -1,0 +1,38 @@
+mixin image(file)
+	img(src=require(`../assets/images/${file}`), alt='', class!=attributes.class)
+
+mixin card(image, image2, image3, subtitle)
+	.card__item
+		.card__background
+			img(src=require(`../assets/images/${image}`), alt='', class!=attributes.class)
+		.card__content
+			.card__title
+				img(src=require(`../assets/images/${image2}`), alt='', class!=attributes.class)
+			.card__img
+				img(src=require(`../assets/images/${image3}`), alt='', class!=attributes.class)
+			.card__subtitle
+				p= subtitle
+			.card__btn PLAY NOW
+
+//+card('backgroundCad1.png', 'cardTitle1.png', 'cardimage1.png', 'Casino Game')
+
+mixin players(userImage, userName, gameStatus, gameAmount, gameValutaName, gameValutaImg, betMultiple)
+	.play
+		.playResault
+			.useerImage
+				img(src=require(`../assets/images/${userImage}`), alt='', class!=attributes.class)
+			.userName
+				p= userName
+			.gameStatus
+				p= gameStatus
+			.gameAmount
+				p= gameAmount
+			.gamevaluta
+				p= gameValutaName
+				img(
+					src=require(`../assets/images/${gameValutaImg}`),
+					alt='',
+					class!=attributes.class)
+			.betMultiple
+				p= betMultiple
+		.playTime 14 minutes ago.
